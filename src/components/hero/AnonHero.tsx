@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StudentPicture from "../studentPicture/StudentPicture";
 import styles from "./styles.module.scss";
 
@@ -16,7 +17,9 @@ export default function AnonHero() {
         <StudentPicture image="/images/students/student-5.avif" />
         <StudentPicture image="/images/students/student-3.avif" />
       </div>
-      <button className={styles.logInWrapper}>Sign In</button>
+      <Link href="/login" className={styles.logInWrapper}>
+        Sign In
+      </Link>
     </div>
   );
 }

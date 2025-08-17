@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: center;
     height: 28rem;
+    max-width: 35rem;
+    min-width: 20rem;
 
     @media (min-width: $breakpoint-md) {
       height: 38rem;
@@ -18,13 +20,6 @@
     @media (min-width: $breakpoint-lg) {
       height: 48rem;
     }
-
-    @media (min-width: $breakpoint-xl) {
-      height: 55rem;
-    }
-
-    max-width: 35rem;
-    min-width: 20rem;
 
     > div:nth-child(odd) {
       margin-top: 3rem;
