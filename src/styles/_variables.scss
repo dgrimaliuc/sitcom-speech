@@ -1,0 +1,13 @@
+// Variables for Brand Colors
+$primary: var(--color-primary);
+$secondary: var(--color-secondary);
+$background-dark: var(--color-background-dark);
+$background-light: var(--color-background-light);
+$neutral: var(--color-neutral);
+
+// Breakpoints
+$breakpoint-sm: 480px; // mobile
+$breakpoint-md: 768px; // tablet
+$breakpoint-md-lg: 819px; // extended tablet
+$breakpoint-lg: 1024px; // small desktop
+$breakpoint-xl: 1440px; // large desktop

@@ -1,0 +1,36 @@
+@use "tailwindcss";
+@use "_variables" as *;
+
+@theme {
+  --color-primary: #49769f; /* bg-primary */
+  --color-secondary: #7bbde8; /* bg-secondary */
+  --color-background-dark: #001d39; /* bg-background-dark */
+  --color-background-light: #bdd8e9; /* bg-background-light */
+  --color-neutral: #6ea2b3; /* bg-neutral */
+}
+
+:root {
+  --foreground: #fffee8;
+}
+
+body {
+  font-size: 60%;
+  min-width: 380px;
+  background-color: $primary;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 70%;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: 80%;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: 100%;
+  }
+
+  position: relative;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
