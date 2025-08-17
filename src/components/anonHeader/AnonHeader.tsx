@@ -7,17 +7,17 @@ export default function AnonHeader() {
       <nav className="text-md font-semibold">
         <ul className="flex items-center space-x-4 text-xs md:text-md lg:text-lg">
           <li>
-            <Link href="/" className="hover:underline">
+            <Link href="#home" className="hover:underline">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:underline">
+            <Link href="#about" className="hover:underline">
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:underline">
+            <Link href="#contact" className="hover:underline">
               Contact
             </Link>
           </li>

@@ -12,11 +12,17 @@
 :root {
   --foreground: #fffee8;
 }
+img {
+  user-select: none;
+}
 
 body {
   font-size: 60%;
   min-width: 380px;
   background-color: $primary;
+  position: relative;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 
   @media (min-width: $breakpoint-md) {
     font-size: 70%;
@@ -29,8 +35,4 @@ body {
   @media (min-width: $breakpoint-xl) {
     font-size: 100%;
   }
-
-  position: relative;
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
