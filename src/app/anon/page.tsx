@@ -23,7 +23,7 @@ export default function AnonymousPage() {
             href="/home"
             className="bg-sky-600 p-2 rounded-tr-2xl rounded-tl-2xl rounded-br-2xl cursor-pointer"
           >
-            Start Today
+            Start Now
           </Link>
           <Link
             href="#signup"
