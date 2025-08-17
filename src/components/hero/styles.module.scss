@@ -1,0 +1,66 @@
+@use "@/styles/main.scss" as *;
+
+.hero {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+
+    @media (min-width: $breakpoint-md) {
+      height: 38rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      height: 48rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      height: 55rem;
+    }
+
+    max-width: 35rem;
+    min-width: 20rem;
+
+    > div:nth-child(odd) {
+      margin-top: 3rem;
+    }
+    > div:nth-child(1) {
+      align-items: end;
+    }
+    > div:nth-child(3) {
+      align-items: start;
+    }
+
+    > div:nth-child(even) {
+      margin-top: -7rem;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      gap: 0.5rem;
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.log-in-wrapper {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  background-color: rgb(255, 187, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 50px 0px 50px 50px;
+  cursor: pointer;
+}
