@@ -19,12 +19,18 @@ export default function AnonymousPage() {
           </p>
         </div>
         <div className="flex items-center space-x-4">
-          <button className="bg-sky-600 p-2 rounded-tr-2xl rounded-tl-2xl rounded-br-2xl cursor-pointer">
+          <Link
+            href="/home"
+            className="bg-sky-600 p-2 rounded-tr-2xl rounded-tl-2xl rounded-br-2xl cursor-pointer"
+          >
             Start Today
-          </button>
-          <button className="bg-gray-700 p-2 rounded-tr-2xl rounded-tl-2xl rounded-bl-2xl cursor-pointer">
+          </Link>
+          <Link
+            href="#signup"
+            className="bg-gray-700 p-2 rounded-tr-2xl rounded-tl-2xl rounded-bl-2xl cursor-pointer"
+          >
             Registration
-          </button>
+          </Link>
         </div>
       </div>
       <div className={styles.anonFooter}>
@@ -50,7 +56,7 @@ export default function AnonymousPage() {
         </div>
       </div>
 
-      <div className={styles.heroContentWrapper}>
+      <div className={styles.contentWrapper}>
         <AnonHero />
       </div>
     </div>
