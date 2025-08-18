@@ -4,6 +4,7 @@ $secondary: var(--color-secondary);
 $background-dark: var(--color-background-dark);
 $background-light: var(--color-background-light);
 $neutral: var(--color-neutral);
+$orange-light: var(--color-orange-light);
 
 // Breakpoints
 $breakpoint-sm: 480px; // mobile
@@ -11,3 +12,7 @@ $breakpoint-md: 768px; // tablet
 $breakpoint-md-lg: 819px; // extended tablet
 $breakpoint-lg: 1024px; // small desktop
 $breakpoint-xl: 1440px; // large desktop
+
+// Gaps
+$gap-sm: 0.5rem;
+$gap-lg: 2.5rem;
