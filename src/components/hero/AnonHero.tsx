@@ -21,7 +21,7 @@ export default function AnonHero() {
 
       <Link
         href="#login"
-        className="absolute top-0 right-[1rem] bg-[#ffbb00] pb-[0.5rem] pt-[0.5rem] pl-[1rem] pr-[1rem] rounded-bl-[50px] rounded-br-[50px] rounded-tl-[50px] cursor-pointer"
+        className="absolute top-0 right-[1rem] bg-orange-light pb-[0.5rem] pt-[0.5rem] pl-[1rem] pr-[1rem] rounded-bl-[50px] rounded-br-[50px] rounded-tl-[50px] cursor-pointer"
       >
         Sign In
       </Link>

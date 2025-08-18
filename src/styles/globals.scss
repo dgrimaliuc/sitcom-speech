@@ -1,19 +1,40 @@
 @use "tailwindcss";
 @use "_variables" as *;
+@use "sass:map";
 
+$colors: (
+  primary: #49769f,
+  secondary: #7bbde8,
+  background-dark: #001d39,
+  background-light: #bdd8e9,
+  neutral: #6ea2b3,
+
+  orange-light: #ffbb00,
+  foreground: #fffee8,
+);
+
+// Tailwind theme definition
 @theme {
-  --color-primary: #49769f; /* bg-primary */
-  --color-secondary: #7bbde8; /* bg-secondary */
-  --color-background-dark: #001d39; /* bg-background-dark */
-  --color-background-light: #bdd8e9; /* bg-background-light */
-  --color-neutral: #6ea2b3; /* bg-neutral */
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
 }
 
+// CSS variables in :root for direct usage
 :root {
-  --foreground: #fffee8;
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
 }
+
 img {
   user-select: none;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
 }
 
 body {
@@ -21,7 +42,7 @@ body {
   min-width: 380px;
   background-color: $primary;
   position: relative;
-  color: var(--foreground);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
 
   @media (min-width: $breakpoint-md) {

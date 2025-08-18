@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "@/styles/globals.scss";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
+
+import "@/styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "Sitcom Speacg",

@@ -2,10 +2,16 @@ import AnonHeader from "@/components/anonHeader/AnonHeader";
 import styles from "./styles/styles.module.scss";
 import Link from "next/link";
 import AnonHero from "@/components/hero/AnonHero";
+import Modal from "@/components/modal/Modal";
+import AuthModal from "@/components/authModal/AuthModal";
 
 export default function AnonymousPage() {
   return (
     <div className={styles.anonWrapper}>
+      <Modal>
+        <AuthModal />
+      </Modal>
+
       <div className={styles.anonHeader}>
         <AnonHeader />
       </div>

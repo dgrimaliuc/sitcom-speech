@@ -1,0 +1,46 @@
+@use "@/styles/main.scss" as *;
+
+.modal {
+  &-wrapper {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(1px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.521);
+      z-index: -1;
+    }
+  }
+
+  &-container {
+    backdrop-filter: blur(1px);
+    background: $secondary;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 30rem;
+    height: 20rem;
+    padding: 1rem 1.5rem;
+    min-height: 20rem;
+
+    @media screen and (max-width: $breakpoint-md-lg) {
+      width: 70%;
+      height: 40%;
+    }
+  }
+}
