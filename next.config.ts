@@ -1,30 +1,38 @@
 import type { NextConfig } from "next";
+import type { Configuration, RuleSetRule, RuleSetUseItem } from "webpack";
 
 const nextConfig: NextConfig = {
-  webpack(config) {
-    config.module?.rules?.forEach((rule: any) => {
+  reactStrictMode: false,
+  webpack(config: Configuration) {
+    config.module?.rules?.forEach((rule: RuleSetRule | any) => {
       if (rule.oneOf) {
-        rule.oneOf.forEach((one: any) => {
-          const uses = Array.isArray(one.use)
+        rule.oneOf.forEach((one: RuleSetRule) => {
+          const uses: RuleSetUseItem[] | any = Array.isArray(one.use)
             ? one.use
             : one.use
             ? [one.use]
             : [];
 
-          uses.forEach((u: any) => {
+          uses.forEach((u: RuleSetUseItem) => {
             if (
               typeof u === "object" &&
-              u.loader?.includes("css-loader") &&
-              u.options?.modules
+              "loader" in u &&
+              typeof u.loader === "string" &&
+              u.loader.includes("css-loader") &&
+              u.options &&
+              typeof u.options === "object" &&
+              "modules" in u.options &&
+              u.options.modules !== false // ✅ guard against boolean `false`
             ) {
-              // ✅ only change this property, don’t override Next.js defaults
-              u.options.modules.exportLocalsConvention = "camelCaseOnly";
+              const opts = u.options as {
+                modules: { exportLocalsConvention?: string };
+              };
+              opts.modules.exportLocalsConvention = "camelCaseOnly";
             }
           });
         });
       }
     });
-
     return config;
   },
 };

@@ -1,21 +1,21 @@
 import AnonHeader from "@/components/anonHeader/AnonHeader";
-import styles from "./styles/styles.module.scss";
+import style from "./styles/styles.module.scss";
 import Link from "next/link";
-import AnonHero from "@/components/hero/AnonHero";
-import Modal from "@/components/modal/Modal";
-import AuthModal from "@/components/authModal/AuthModal";
+import CommunityPreview from "@/components/communityPreview/CommunityPreview";
+// import Modal from "@/components/modal/Modal";
+// import AuthModal from "@/components/authModal/AuthModal";
 
 export default function AnonymousPage() {
   return (
-    <div className={styles.anonWrapper}>
-      <Modal>
+    <div className={style.anonWrapper}>
+      {/* <Modal>
         <AuthModal />
-      </Modal>
+      </Modal> */}
 
-      <div className={styles.anonHeader}>
+      <div className={style.anonHeader}>
         <AnonHeader />
       </div>
-      <div className={styles.anonMessageBlock}>
+      <div className={style.anonMessageBlock}>
         <div>
           <h2 className="text-4xl font-semibold ">
             Your Modern Online Schoool
@@ -39,7 +39,7 @@ export default function AnonymousPage() {
           </Link>
         </div>
       </div>
-      <div className={styles.anonFooter}>
+      <div className={style.anonFooter}>
         <div>
           <h3 className="text-xl mb-4">Chose your level</h3>
           <ul className="flex items-center space-x-4 text-md">
@@ -62,8 +62,8 @@ export default function AnonymousPage() {
         </div>
       </div>
 
-      <div className={styles.contentWrapper}>
-        <AnonHero />
+      <div className={style.contentWrapper}>
+        <CommunityPreview />
       </div>
     </div>
   );

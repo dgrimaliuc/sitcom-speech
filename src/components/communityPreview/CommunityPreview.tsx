@@ -8,9 +8,9 @@ const studentGroups = [
   ["/images/students/student-5.avif", "/images/students/student-3.avif"],
 ];
 
-export default function AnonHero() {
+export default function CommunityPreview() {
   return (
-    <div className={styles.heroWrapper}>
+    <div className={styles.communityWrapper}>
       {studentGroups.map((group, index) => (
         <div key={index}>
           {group.map((image, i) => (
