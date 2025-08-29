@@ -1,16 +1,26 @@
+"use client";
+
 import AnonHeader from "@/components/anonHeader/AnonHeader";
 import style from "./styles/styles.module.scss";
 import Link from "next/link";
 import CommunityPreview from "@/components/communityPreview/CommunityPreview";
-// import Modal from "@/components/modal/Modal";
-// import AuthModal from "@/components/authModal/AuthModal";
+import AuthModal from "@/components/authModal/AuthModal";
+import React, { useState } from "react";
 
 export default function AnonymousPage() {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsAuthModalOpen(true);
+  };
+
+  const hideModal = () => {
+    setIsAuthModalOpen(false);
+  };
+
   return (
     <div className={style.anonWrapper}>
-      {/* <Modal>
-        <AuthModal />
-      </Modal> */}
+      <AuthModal isOpen={isAuthModalOpen} onCloseClick={hideModal} />
 
       <div className={style.anonHeader}>
         <AnonHeader />
@@ -34,6 +44,7 @@ export default function AnonymousPage() {
           <Link
             href="#signup"
             className="bg-gray-700 p-2 rounded-tr-2xl rounded-tl-2xl rounded-bl-2xl cursor-pointer"
+            onClick={openModal}
           >
             Registration
           </Link>
@@ -63,7 +74,7 @@ export default function AnonymousPage() {
       </div>
 
       <div className={style.contentWrapper}>
-        <CommunityPreview />
+        <CommunityPreview onCTAClick={openModal} />
       </div>
     </div>
   );
