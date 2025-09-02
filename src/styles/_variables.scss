@@ -11,8 +11,21 @@ $breakpoint-sm: 480px; // mobile
 $breakpoint-md: 768px; // tablet
 $breakpoint-md-lg: 819px; // extended tablet
 $breakpoint-lg: 1024px; // small desktop
+$breakpoint-lg-extended: 1231px;
 $breakpoint-xl: 1440px; // large desktop
 
 // Gaps
+$gap-xs: 0.25rem;
 $gap-sm: 0.5rem;
+$gap-md: 1.25rem;
 $gap-lg: 2.5rem;
+$gap-xl: 4rem;
+$gap-2xl: 6rem;
+$gap-3xl: 10rem;
+
+// Heights
+$header-height: 4.5rem; // 72px
+$footer-height: 3.75rem; // 60px
+$footer-height-md: 5rem; // 80px
+$footer-height-lg: 6.25rem; // 100px
+$hero-carousel-height: 45rem; // 880px

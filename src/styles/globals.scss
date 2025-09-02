@@ -1,6 +1,6 @@
-@use "tailwindcss";
 @use "_variables" as *;
 @use "sass:map";
+@use "tailwindcss";
 
 $colors: (
   primary: #49769f,
@@ -11,6 +11,7 @@ $colors: (
 
   orange-light: #ffbb00,
   foreground: #fffee8,
+  foreground-muted: #ffffffcc,
 );
 
 // Tailwind theme definition
@@ -56,4 +57,9 @@ body {
   @media (min-width: $breakpoint-xl) {
     font-size: 100%;
   }
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-foreground-muted);
 }

@@ -3,6 +3,9 @@ import type { Configuration, RuleSetRule, RuleSetUseItem } from "webpack";
 
 const nextConfig: NextConfig = {
   reactStrictMode: false,
+  images: {
+    remotePatterns: [new URL("https://image.tmdb.org/**")],
+  },
   webpack(config: Configuration) {
     config.module?.rules?.forEach((rule: RuleSetRule | any) => {
       if (rule.oneOf) {
