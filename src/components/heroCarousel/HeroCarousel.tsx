@@ -49,6 +49,12 @@ export default function HeroCarousel() {
       <div className={styles.heroCarouselWrapper}>
         {/* ${styles.fadeOut} */}
         <div className={`${styles.heroCarouselContainer}`}>
+          <div className={styles.heroCarouselNewPoster}>
+            <img
+              src="https://image.tmdb.org/t/p//original/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg"
+              alt=""
+            />
+          </div>
           <div className={styles.heroCarouselPoster}>
             <picture>
               <img src="/images/demon_slayer.webp" alt="" />

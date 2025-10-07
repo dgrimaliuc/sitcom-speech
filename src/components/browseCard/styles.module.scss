@@ -19,10 +19,6 @@
     height: 100%;
   }
 
-  &__info.hide {
-    animation: slideDown 0.8s ease;
-  }
-
   &__info {
     position: absolute;
     margin: 0.5rem;
@@ -38,7 +34,7 @@
       font-size: 1.2rem;
     }
   }
-  &__info.sliding {
+  &__info.sliding-down {
     animation: slideDown 0.8s ease forwards;
   }
 

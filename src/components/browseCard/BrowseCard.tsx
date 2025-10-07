@@ -30,8 +30,8 @@ const BrowseCard = ({ title, poster, media_type, as, id }: BrowseCardProps) => {
             />
           </picture>
           <div className={styles.browseCardHover} />
-          {/* ${styles.sliding} */}
-          <div className={`${styles.browseCardInfo}  ${styles.hide}`}>
+          {/* ${styles.slidingDown}  */}
+          <div className={`${styles.browseCardInfo} `}>
             <h3>{title}</h3>
           </div>
         </div>

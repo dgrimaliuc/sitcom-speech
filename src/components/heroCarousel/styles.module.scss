@@ -28,7 +28,8 @@
     }
   }
 
-  &__poster {
+  &__poster,
+  &__new-poster {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -42,6 +43,12 @@
         object-fit: cover;
       }
     }
+  }
+
+  &__new-poster {
+    z-index: 1;
+    // position: absolute;
+    // inset: 0;
   }
 
   &__poster::after {
